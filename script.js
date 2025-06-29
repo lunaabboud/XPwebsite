@@ -1,9 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Sound Effects
+    const startupSound = document.getElementById('startup-sound');
+    const clickSound = document.getElementById('click-sound');
+    const errorSound = document.getElementById('error-sound');
+
     // Boot Screen
     setTimeout(() => {
         document.querySelector('.boot-screen').style.display = 'none';
         document.querySelector('#welcome-window').classList.add('active');
-        addTaskbarItem('welcome-window', 'Welcome to Lina\'s Portfolio', 'https://via.placeholder.com/16x16?text=Home');
+        addTaskbarItem('welcome-window', 'Welcome to Lina\'s Portfolio', 'https://win98icons.alexmeub.com/icons/png/computer_explorer-5.png');
+        startupSound.play().catch(err => console.log('Startup sound failed:', err));
     }, 5000);
 
     // System Clock
@@ -39,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.style.zIndex = zIndexCounter++;
             deactivateOtherWindows(window);
             updateTaskbarActive(window.id);
+            clickSound.play().catch(err => console.log('Click sound failed:', err));
         });
 
         document.addEventListener('mousemove', (e) => {
@@ -63,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.querySelector('.minimize').addEventListener('click', () => {
             window.classList.remove('active');
             updateTaskbarActive(null);
+            clickSound.play().catch(err => console.log('Click sound failed:', err));
         });
 
         window.querySelector('.maximize').addEventListener('click', () => {
@@ -79,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.dataset.originalTop = window.style.top;
                 window.classList.add('maximized');
             }
+            clickSound.play().catch(err => console.log('Click sound failed:', err));
         });
 
         window.querySelector('.close').addEventListener('click', () => {
@@ -86,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const taskbarItem = taskbarItems.querySelector(`[data-window="${window.id}"]`);
             if (taskbarItem) taskbarItem.remove();
             updateTaskbarActive(null);
+            clickSound.play().catch(err => console.log('Click sound failed:', err));
         });
     });
 
@@ -100,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 deactivateOtherWindows(window);
                 addTaskbarItem(windowId, window.querySelector('.window-title').textContent, getWindowIcon(window));
                 updateTaskbarActive(windowId);
+                clickSound.play().catch(err => console.log('Click sound failed:', err));
             }
         });
 
@@ -123,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 deactivateOtherWindows(window);
                 updateTaskbarActive(windowId);
             }
+            clickSound.play().catch(err => console.log('Click sound failed:', err));
         }
     });
 
@@ -130,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.start-button').addEventListener('click', () => {
         startMenu.classList.toggle('active');
         contextMenu.classList.remove('active');
+        clickSound.play().catch(err => console.log('Click sound failed:', err));
     });
 
     document.querySelectorAll('.start-menu-item').forEach(item => {
@@ -143,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 addTaskbarItem(windowId, window.querySelector('.window-title').textContent, getWindowIcon(window));
                 updateTaskbarActive(windowId);
                 startMenu.classList.remove('active');
+                clickSound.play().catch(err => console.log('Click sound failed:', err));
             }
         });
     });
@@ -154,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contextMenu.style.left = `${e.clientX}px`;
             contextMenu.style.top = `${e.clientY}px`;
             contextMenu.classList.add('active');
+            clickSound.play().catch(err => console.log('Click sound failed:', err));
         }
     });
 
@@ -174,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('System Properties - Not Implemented');
             }
             contextMenu.classList.remove('active');
+            clickSound.play().catch(err => console.log('Click sound failed:', err));
         });
     });
 
@@ -190,8 +206,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('email').value = '';
                 document.getElementById('message').value = '';
                 hideLoadingScreen();
+                clickSound.play().catch(err => console.log('Click sound failed:', err));
             }, 2000);
         } else {
+            errorSound.play().catch(err => console.log('Error sound failed:', err));
             alert('Please fill in all fields.');
         }
     });
@@ -226,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getWindowIcon(window) {
         const img = window.querySelector('.window-title img');
-        return img ? img.src : 'https://via.placeholder.com/16x16?text=Icon';
+        return img ? img.src : 'https://win98icons.alexmeub.com/icons/png/computer_explorer-5.png';
     }
 
     function showLoadingScreen() {
