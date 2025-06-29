@@ -38,6 +38,7 @@ body {
 
 .boot-logo img {
     margin-bottom: 20px;
+    width: 200px;
 }
 
 .boot-progress {
@@ -146,8 +147,9 @@ body {
     background: linear-gradient(145deg, #ffeb3b, #ffc107);
 }
 
-.folder-icon i {
-    color: #8d6e00;
+.folder-icon img {
+    width: 40px;
+    height: 40px;
 }
 
 .icon-label {
@@ -318,6 +320,11 @@ body {
     justify-content: center;
 }
 
+.welcome-buttons img {
+    width: 16px;
+    height: 16px;
+}
+
 /* XP Button Styles */
 .xp-button {
     padding: 6px 12px;
@@ -381,8 +388,8 @@ body {
 }
 
 .start-button img {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
 }
 
 .taskbar-separator {
@@ -450,9 +457,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     cursor: pointer;
-    font-size: 10px;
+}
+
+.tray-icon img {
+    width: 16px;
+    height: 16px;
 }
 
 .tray-icon:hover {
@@ -552,8 +562,9 @@ body {
     justify-content: center;
 }
 
-.start-item-icon i {
-    font-size: 14px;
+.start-item-icon img {
+    width: 16px;
+    height: 16px;
 }
 
 .start-menu-separator {
@@ -733,8 +744,8 @@ body {
 }
 
 .project-icon {
-    font-size: 32px;
-    color: #316ac5;
+    width: 32px;
+    height: 32px;
     margin-bottom: 8px;
 }
 
