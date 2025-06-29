@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lina's Portfolio - Windows XP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Boot Screen -->
+    <div class="boot-screen">
+        <div class="boot-logo">
+            <img src="https://via.placeholder.com/200x100?text=Windows+XP" alt="Windows XP Logo">
+            <div class="boot-progress">
+                <div class="boot-progress-bar"></div>
+            </div>
+            <div class="boot-text">Starting Windows XP...</div>
+        </div>
+    </div>
+
+    <!-- Desktop -->
+    <div class="desktop">
+        <div class="desktop-background">
+            <div class="desktop-icons">
+                <div class="desktop-icon" data-window="welcome-window">
+                    <div class="icon-image">
+                        <img src="https://via.placeholder.com/40x40?text=Home" alt="Welcome Icon">
+                    </div>
+                    <span class="icon-label">Welcome</span>
+                </div>
+                <div class="desktop-icon" data-window="about-window">
+                    <div class="icon-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span class="icon-label">About Me</span>
+                </div>
+                <div class="desktop-icon" data-window="projects-window">
+                    <div class="icon-image folder-icon">
+                        <i class="fas fa-folder"></i>
+                    </div>
+                    <span class="icon-label">My Projects</span>
+                </div>
+                <div class="desktop-icon" data-window="skills-window">
+                    <div class="icon-image">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <span class="icon-label">Skills</span>
+                </div>
+                <div class="desktop-icon" data-window="education-window">
+                    <div class="icon-image">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span class="icon-label">Education</span>
+                </div>
+                <div class="desktop-icon" data-window="certifications-window">
+                    <div class="icon-image">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <span class="icon-label">Certifications</span>
+                </div>
+                <div class="desktop-icon" data-window="contact-window">
+                    <div class="icon-image">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <span class="icon-label">Contact</span>
+                </div>
+                <div class="desktop-icon">
+                    <div class="icon-image">
+                        <i class="fas fa-file-download"></i>
+                    </div>
+                    <a href="cv.pdf" download class="icon-label">Download CV</a>
+                </div>
+                <div class="desktop-icon" data-window="recycle-bin-window">
+                    <div class="icon-image">
+                        <i class="fas fa-trash"></i>
+                    </div>
+                    <span class="icon-label">Recycle Bin</span>
+                </div>
+            </div>
+
+            <!-- Windows Container -->
+            <div class="windows-container">
+                <!-- Welcome Window -->
+                <div class="window" id="welcome-window" style="top: 50px; left: 50px; width: 600px; height: 400px;">
+                    <div class="window-header">
+                        <div class="window-title">
+                            <img src="https://via.placeholder.com/16x16?text=Home" alt="Welcome Icon">
+                            Welcome to Lina's Portfolio
+                        </div>
+                        <div class="window-controls">
+                            <div class="control-btn minimize">-</div>
+                            <div class="control-btn maximize">□</div>
+                            <div class="control-btn close">X</div>
+                        </div>
+                    </div>
+                    <div class="window-content welcome-content">
+                        <div class="welcome-profile">
+                            <img class="welcome-avatar" src="https://via.placeholder.com/120x120?text=Avatar" alt="Lina's Avatar">
+                            <div class="welcome-info">
+                                <h1>Hello, I'm Lina Abboud</h1>
+                                <h2>ICT Engineering Student</h2>
+                                <p>Cybersecurity & Cloud Enthusiast</p>
+                            </div>
+                            <div class="welcome-buttons">
+                                <a class="xp-button" href="#" data-window="about-window">
+                                    <i class="fas fa-user"></i> About Me
+                                </a>
+                                <a class="xp-button" href="#" data-window="projects-window">
+                                    <i class="fas fa-folder"></i> My Projects
+                                </a>
+                                <a class="xp-button" href="cv.pdf" download>
+                                    <i class="fas fa-file-download"></i> Download CV
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Window -->
+                <div class="window" id="about-window" style="top: 100px; left: 100px; width: 500px; height: 350px;">
+                    <div class="window-header">
+                        <div class="window-title">
+                            <i class="fas fa-user"></i> About Me
+                        </div>
+                        <div class="window-controls">
+                            <div class="control-btn minimize">-</div>
+                            <div class="control-btn maximize">□</div>
+                            <div class="control-btn close">X</div>
+                        </div>
+                    </div>
+                    <div class="window-content section-content">
+                        <h2>About Me</h2>
+                        <p>I'm Lina Abboud, a passionate ICT Engineering student with a focus on cybersecurity and cloud computing. I enjoy building secure and scalable systems.</p>
+                        <h3>Interests</h3>
+                        <ul>
+                            <li>Cybersecurity</li>
+                            <li>Cloud Computing</li>
+                            <li>Web Development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Projects Window -->
+                <div class="window" id="projects-window" style="top: 150px; left: 150px; width: 600px; height: 400px;">
+                    <div class="window-header">
+                        <div class="window-title">
+                            <i class="fas fa-folder"></i> My Projects
+                        </div>
+                        <div class="window-controls">
+                            <div class="control-btn minimize">-</div>
+                            <div class="control-btn maximize">□</div>
+                            <div class="control-btn close">X</div>
+                        </div>
+                    </div>
+                    <div class="window-content section-content">
+                        <h2>My Projects</h2>
+                        <div class="projects-grid">
+                            <div class="project-item">
+                                <i class="fas fa-shield-alt project-icon"></i>
+                                <div class="project-title">Secure App</div>
+                                <div class="project-desc">A cybersecurity-focused web application.</div>
+                            </div>
+                            <div class="project-item">
+                                <i class="fas fa-cloud project-icon"></i>
+                                <div class="project-title">Cloud Dashboard</div>
+                                <div class="project-desc">A cloud management dashboard.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Window -->
+                <div class="window" id="skills-window" style="top: 200px; left: 200px; width: 500px; height: 300px;">
+                    <div class="window-header">
+                        <div class="window-title">
+                            <i class="fas fa-cogs"></i> Skills
+                        </div>
+                        <div class="window-controls">
+                            <div class="control-btn minimize">-</div>
+                            <div class="control-btn maximize">□</div>
+                            <div class="control-btn close">X</div>
+                        </div>
+                    </div>
+                    <div class="window-content section-content">
+                        <h2>Skills</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item">Python</div>
+                            <div class="skill-item">JavaScript</div>
+                            <div class="skill-item">AWS</div>
+                            <div class="skill-item">Network Security</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Window -->
+                <div class="window" id="education-window" style="top: 250px; left: 250px; width: 500px; height: 300px;">
+                    <div class="window-header">
+                        <div class="window-title">
+                            <i class="fas fa-graduation-cap"></i> Education
+                        </div>
+                        <div class="window-controls">
+                            <div class="control-btn minimize">-</div>
+                            <div class="control-btn maximize">□</div>
+                            <div class="control-btn close">X</div>
+                        </div>
+                    </div>
+                    <div class="window-content section-content">
+                        <h2>Education</h2>
+                        <p>Bachelor's in ICT Engineering, [Your University], Ongoing</p>
+                    </div>
+                </div>
+
+                <!-- Certifications Window -->
+                <div class="window" id="certifications-window" style="top: 300px; left: 300px; width:500px; height: 300px;">
+                    <div class="window-header">
+                        <div class="window-title">
+                            <i class="fas fa-certificate"></i> Certifications
+                        </div>
+                        <div class="window-controls">
+                            <div class="control-btn minimize">-</div>
+                            <div class="control-btn maximize">□</div>
+                            <div class="control-btn close">X</div>
+                        </div>
+                    </div>
+                    <div class="window-content section-content">
+                        <h2>Certifications</h2>
+                        <ul>
+                            <li>AWS Certified Solutions Architect</li>
+                            <li>CompTIA Security+</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Window -->
+                <div class="window" id="contact-window" style="top: 350px; left: 350px; width: 500px; height: 400px;">
+                    <div class="window-header">
+                        <div class="window-title">
+                            <i class="fas fa-envelope"></i> Contact
+                        </div>
+                        <div class="window-controls">
+                            <div class="control-btn minimize">-</div>
+                            <div class="control-btn maximize">□</div>
+                            <div class="control-btn close">X</div>
+                        </div>
+                    </div>
+                    <div class="window-content section-content">
+                        <h2>Contact Me</h2>
+                        <div class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-control" placeholder="Your Message"></textarea>
+                            </div>
+                            <button class="xp-button">Send</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recycle Bin Window -->
+                <div class="window" id="recycle-bin-window" style="top: 400px; left: 400px; width: 500px; height: 300px;">
+                    <div class="window-header">
+                        <div class="window-title">
+                            <i class="fas fa-trash"></i> Recycle Bin
+                        </div>
+                        <div class="window-controls">
+                            <div class="control-btn minimize">-</div>
+                            <div class="control-btn maximize">□</div>
+                            <div class="control-btn close">X</div>
+                        </div>
+                    </div>
+                    <div class="window-content section-content">
+                        <h2>Recycle Bin</h2>
+                        <p>Empty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <div class="start-button">
+                <img src="https://via.placeholder.com/16x16?text=Start" alt="Start Icon">
+                start
+            </div>
+            <div class="taskbar-separator"></div>
+            <div class="taskbar-items"></div>
+            <div class="system-tray">
+                <div class="system-tray-icons">
+                    <div class="tray-icon"><i class="fas fa-volume-up"></i></div>
+                    <div class="tray-icon"><i class="fas fa-network-wired"></i></div>
+                </div>
+                <div class="system-clock"></div>
+            </div>
+        </div>
+
+        <!-- Start Menu -->
+        <div class="start-menu">
+            <div class="start-menu-header">
+                <img class="user-avatar" src="https://via.placeholder.com/32x32?text=User" alt="User Avatar">
+                <div class="start-menu-user">
+                    <span>Lina Abboud</span>
+                </div>
+            </div>
+            <div class="start-menu-content">
+                <div class="start-menu-items">
+                    <div class="start-menu-item" data-window="about-window">
+                        <div class="start-item-icon"><i class="fas fa-user"></i></div>
+                        About Me
+                    </div>
+                    <div class="start-menu-item" data-window="education-window">
+                        <div class="start-item-icon"><i class="fas fa-graduation-cap"></i></div>
+                        Education
+                    </div>
+                    <div class="start-menu-item" data-window="certifications-window">
+                        <div class="start-item-icon"><i class="fas fa-certificate"></i></div>
+                        Certifications
+                    </div>
+                    <div class="start-menu-item" data-window="skills-window">
+                        <div class="start-item-icon"><i class="fas fa-cogs"></i></div>
+                        Skills
+                    </div>
+                    <div class="start-menu-item" data-window="projects-window">
+                        <div class="start-item-icon"><i class="fas fa-folder"></i></div>
+                        My Projects
+                    </div>
+                    <div class="start-menu-item" data-window="contact-window">
+                        <div class="start-item-icon"><i class="fas fa-envelope"></i></div>
+                        Contact
+                    </div>
+                    <div class="start-menu-separator"></div>
+                    <div class="start-menu-item">
+                        <div class="start-item-icon"><i class="fas fa-file-download"></i></div>
+                        <a href="cv.pdf" download>Download CV</a>
+                    </div>
+                </div>
+                <div class="start-menu-footer">
+                    <div class="start-menu-item power-options">
+                        <div class="start-item-icon"><i class="fas fa-power-off"></i></div>
+                        Turn Off Computer
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Context Menu -->
+        <div class="context-menu">
+            <div class="context-menu-item">Refresh</div>
+            <div class="context-menu-separator"></div>
+            <div class="context-menu-item">Properties</div>
+        </div>
+
+        <!-- Loading Screen -->
+        <div class="loading-screen">
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                Loading...
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
